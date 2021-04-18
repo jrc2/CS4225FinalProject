@@ -1,0 +1,5 @@
+package edu.westga.cs4225.pagerank;
+
+public class PageRank {
+
+}
