@@ -57,7 +57,7 @@ public class PageRank {
 		}
 	}
 
-	public static class PageRankReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+	public static class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 		private IntWritable result = new IntWritable();
 
 		public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
@@ -83,8 +83,8 @@ public class PageRank {
 
 		job.setJarByClass(PageRank.class);
 		job.setMapperClass(TokenizerMapper.class);
-		job.setCombinerClass(PageRankReducer.class);
-		job.setReducerClass(PageRankReducer.class);
+		job.setCombinerClass(IntSumReducer.class);
+		job.setReducerClass(IntSumReducer.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(Text.class);
 		FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
