@@ -1,0 +1,6 @@
+<page> <title>A</title> <text> [[B]] [[C]] [[D]] </text>  </page>
+<page> <title>B</title> <text> [[C]] [[E]]</text>  </page>
+<page> <title>C</title> <text> [[D]] [[E]] [[F]] </text>  </page>
+<page> <title>D</title> <text> [[F]] </text>  </page>
+<page> <title>E</title> <text> [[C]] [[F]] </text>  </page>
+<page> <title>F</title> <text>     </text>  </page>
